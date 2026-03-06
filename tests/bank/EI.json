@@ -1,0 +1,37 @@
+{
+  "dimension": "EI",
+  "questions": [
+    { "id": "EI_001", "dimension": "EI", "text": "在热闹的社交场合，我通常会更有精神。", "reverse": false },
+    { "id": "EI_002", "dimension": "EI", "text": "与很多人一起参加活动，会让我感到充电。", "reverse": false },
+    { "id": "EI_003", "dimension": "EI", "text": "我更喜欢先独处一段时间，再去见人。", "reverse": true },
+    { "id": "EI_004", "dimension": "EI", "text": "长时间的社交会明显消耗我的精力。", "reverse": true },
+    { "id": "EI_005", "dimension": "EI", "text": "我倾向于在讨论中主动开口表达观点。", "reverse": false },
+    { "id": "EI_006", "dimension": "EI", "text": "我更享受与少数熟人安静相处，而不是大型聚会。", "reverse": true },
+    { "id": "EI_007", "dimension": "EI", "text": "我喜欢把想法说出来，在交流中逐步理清思路。", "reverse": false },
+    { "id": "EI_008", "dimension": "EI", "text": "我通常需要先在心里想清楚，才愿意开口。", "reverse": true },
+    { "id": "EI_009", "dimension": "EI", "text": "当团队气氛活跃时，我会更投入、更高效。", "reverse": false },
+    { "id": "EI_010", "dimension": "EI", "text": "我更愿意把私人感受留给自己，而不是频繁分享。", "reverse": true },
+
+    { "id": "EI_011", "dimension": "EI", "text": "和新认识的人聊天通常让我感到兴奋。", "reverse": false },
+    { "id": "EI_012", "dimension": "EI", "text": "如果连续几天没有社交，我可能会觉得有点无聊。", "reverse": false },
+    { "id": "EI_013", "dimension": "EI", "text": "我经常需要独处时间来恢复精力。", "reverse": true },
+    { "id": "EI_014", "dimension": "EI", "text": "在人多的环境中，我通常会变得更加活跃。", "reverse": false },
+    { "id": "EI_015", "dimension": "EI", "text": "我更喜欢安静地思考，而不是参与很多讨论。", "reverse": true },
+    { "id": "EI_016", "dimension": "EI", "text": "我很容易主动和陌生人展开交流。", "reverse": false },
+    { "id": "EI_017", "dimension": "EI", "text": "相比聚会，我更享受一个人的时间。", "reverse": true },
+    { "id": "EI_018", "dimension": "EI", "text": "团队讨论往往会激发我的表达欲。", "reverse": false },
+    { "id": "EI_019", "dimension": "EI", "text": "在群体中我更习惯先观察，而不是马上参与。", "reverse": true },
+    { "id": "EI_020", "dimension": "EI", "text": "我通常不会回避热闹或人多的场合。", "reverse": false },
+
+    { "id": "EI_021", "dimension": "EI", "text": "和朋友一起活动会让我感觉精力充沛。", "reverse": false },
+    { "id": "EI_022", "dimension": "EI", "text": "在大型活动中，我通常会逐渐变得安静。", "reverse": true },
+    { "id": "EI_023", "dimension": "EI", "text": "当话题热烈时，我通常愿意参与讨论。", "reverse": false },
+    { "id": "EI_024", "dimension": "EI", "text": "我更喜欢深入的一对一交流，而不是群体聊天。", "reverse": true },
+    { "id": "EI_025", "dimension": "EI", "text": "如果有机会，我通常愿意认识更多新朋友。", "reverse": false },
+    { "id": "EI_026", "dimension": "EI", "text": "长时间在人群中会让我感到疲惫。", "reverse": true },
+    { "id": "EI_027", "dimension": "EI", "text": "我习惯通过交流来整理自己的想法。", "reverse": false },
+    { "id": "EI_028", "dimension": "EI", "text": "很多时候，我更喜欢把想法留在心里慢慢思考。", "reverse": true },
+    { "id": "EI_029", "dimension": "EI", "text": "如果环境气氛轻松，我通常会比较健谈。", "reverse": false },
+    { "id": "EI_030", "dimension": "EI", "text": "安静和独处能让我更快恢复状态。", "reverse": true }
+  ]
+}

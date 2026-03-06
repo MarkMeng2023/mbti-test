@@ -1,0 +1,37 @@
+{
+  "dimension": "SN",
+  "questions": [
+    { "id": "SN_001", "dimension": "SN", "text": "我更容易注意到现实中的具体细节。", "reverse": false },
+    { "id": "SN_002", "dimension": "SN", "text": "我经常会思考事情背后的可能性和未来发展。", "reverse": true },
+    { "id": "SN_003", "dimension": "SN", "text": "我倾向于依赖已经验证过的经验。", "reverse": false },
+    { "id": "SN_004", "dimension": "SN", "text": "我喜欢探索新的想法和不同的可能性。", "reverse": true },
+    { "id": "SN_005", "dimension": "SN", "text": "当学习新东西时，我更关注具体步骤。", "reverse": false },
+    { "id": "SN_006", "dimension": "SN", "text": "我常常会联想到抽象的概念或模式。", "reverse": true },
+    { "id": "SN_007", "dimension": "SN", "text": "我更喜欢清晰、具体的信息。", "reverse": false },
+    { "id": "SN_008", "dimension": "SN", "text": "我喜欢从不同角度理解一个概念。", "reverse": true },
+    { "id": "SN_009", "dimension": "SN", "text": "在解决问题时，我通常先看现实条件。", "reverse": false },
+    { "id": "SN_010", "dimension": "SN", "text": "我经常会设想各种未来的可能情景。", "reverse": true },
+
+    { "id": "SN_011", "dimension": "SN", "text": "我更喜欢实际可操作的方法。", "reverse": false },
+    { "id": "SN_012", "dimension": "SN", "text": "新的概念或理论往往让我感到兴奋。", "reverse": true },
+    { "id": "SN_013", "dimension": "SN", "text": "我习惯一步一步按照流程完成任务。", "reverse": false },
+    { "id": "SN_014", "dimension": "SN", "text": "我常常思考不同事物之间的联系。", "reverse": true },
+    { "id": "SN_015", "dimension": "SN", "text": "我更关注事情现在是什么样。", "reverse": false },
+    { "id": "SN_016", "dimension": "SN", "text": "我更关注事情未来可能变成什么样。", "reverse": true },
+    { "id": "SN_017", "dimension": "SN", "text": "我更信任事实和经验。", "reverse": false },
+    { "id": "SN_018", "dimension": "SN", "text": "我经常会思考隐藏的意义或象征。", "reverse": true },
+    { "id": "SN_019", "dimension": "SN", "text": "我更容易记住具体的事实。", "reverse": false },
+    { "id": "SN_020", "dimension": "SN", "text": "我更容易记住想法或概念。", "reverse": true },
+
+    { "id": "SN_021", "dimension": "SN", "text": "当别人解释事情时，我希望内容具体清晰。", "reverse": false },
+    { "id": "SN_022", "dimension": "SN", "text": "我喜欢思考新的创意和可能性。", "reverse": true },
+    { "id": "SN_023", "dimension": "SN", "text": "我更喜欢现实、实用的方案。", "reverse": false },
+    { "id": "SN_024", "dimension": "SN", "text": "我喜欢想象未来可能发生的变化。", "reverse": true },
+    { "id": "SN_025", "dimension": "SN", "text": "我更关注事情的实际运作方式。", "reverse": false },
+    { "id": "SN_026", "dimension": "SN", "text": "我经常会从一个想法联想到另一个想法。", "reverse": true },
+    { "id": "SN_027", "dimension": "SN", "text": "我更喜欢具体和现实的描述。", "reverse": false },
+    { "id": "SN_028", "dimension": "SN", "text": "我更喜欢概念化或抽象的讨论。", "reverse": true },
+    { "id": "SN_029", "dimension": "SN", "text": "我通常关注已经发生的事实。", "reverse": false },
+    { "id": "SN_030", "dimension": "SN", "text": "我通常关注未来可能出现的趋势。", "reverse": true }
+  ]
+}

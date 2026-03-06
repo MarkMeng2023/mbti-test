@@ -1,0 +1,247 @@
+:root{
+  --bg:#0b1020;
+  --card:#121a33;
+  --text:#e9ecff;
+  --muted:#aab2da;
+  --accent:#7c5cff;
+  --border:rgba(255,255,255,.10);
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius:18px;
+}
+
+*{ box-sizing:border-box; }
+html, body { height: 100%; }
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background: radial-gradient(1100px 600px at 20% 10%, rgba(124,92,255,.25), transparent 60%),
+              radial-gradient(900px 520px at 80% 30%, rgba(34,197,94,.18), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+
+a{ color: inherit; }
+button{ font-family: inherit; }
+
+.container{ width:min(980px,92vw); margin:0 auto; padding:28px 0 60px; }
+
+.nav{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:14px 18px; border:1px solid var(--border);
+  background: rgba(18,26,51,.75); backdrop-filter: blur(10px);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+
+.brand{ display:flex; align-items:center; gap:10px; font-weight:700; }
+.logo{ font-size:18px; }
+.badge{
+  font-size:12px; padding:4px 10px; border-radius:999px;
+  border:1px solid var(--border); color:var(--muted);
+}
+
+.grid{ display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; margin-top:18px; }
+@media (max-width: 860px){
+  .grid{ grid-template-columns:1fr; }
+  .container{ padding:18px 0 44px; }
+}
+
+.card{
+  border:1px solid var(--border);
+  background: rgba(18,26,51,.78); backdrop-filter: blur(12px);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding:18px;
+}
+
+.h1{ font-size:34px; line-height:1.15; margin:6px 0 10px; }
+.h2{ font-size:18px; margin:0 0 10px; }
+.p{ color:var(--muted); line-height:1.7; margin:0; }
+
+.btnRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+.btn{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color:var(--text);
+  padding:12px 14px; border-radius:14px;
+  cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; justify-content:center;
+}
+.btn:hover{ background: rgba(255,255,255,.10); }
+.btn.primary{ background: rgba(124,92,255,.35); border-color: rgba(124,92,255,.55); }
+.btn.primary:hover{ background: rgba(124,92,255,.48); }
+.btn:disabled{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.ghost{ color:var(--muted); text-decoration:none; }
+.ghost:hover{ color:var(--text); }
+
+.note{ margin-top:14px; padding:12px 14px; border:1px dashed var(--border); border-radius:14px; color:var(--muted); }
+.noteTitle{ color:var(--text); font-weight:700; margin-bottom:6px; }
+.list{ margin:0; padding-left:18px; color:var(--muted); line-height:1.8; }
+
+/* Quiz options */
+.options{
+  margin-top:14px;
+  display:grid;
+  gap:10px;
+}
+.option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background: rgba(255,255,255,.05);
+  cursor:pointer;
+}
+.option:hover{ background: rgba(255,255,255,.09); }
+.option input{ transform: scale(1.1); }
+
+.hint{ margin-top:10px; color:#fca5a5; min-height: 18px; }
+
+/* Score grid */
+.scoreGrid{
+  margin-top:16px;
+  display:grid;
+  gap:10px;
+}
+.scoreItem{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px 14px;
+  background: rgba(255,255,255,.05);
+}
+.scoreTop{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.scoreLabel{ font-weight:700; }
+.scoreVal{ color:var(--muted); font-variant-numeric: tabular-nums; text-align:right; }
+.bar{
+  height:10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.08);
+  overflow:hidden;
+  margin-top:10px;
+}
+.bar > div{
+  height:100%;
+  width:50%;
+  background: rgba(124,92,255,.55);
+}
+
+/* Form fields */
+.field{ display:flex; flex-direction:column; gap:6px; color:var(--muted); font-size:13px; }
+.field select{
+  padding:10px 12px; border-radius:12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  outline:none;
+}
+.field select:focus{
+  border-color: rgba(124,92,255,.55);
+}
+.field span{ color: var(--muted); }
+
+/* Progress */
+.progressWrap{ margin-bottom:14px; }
+.progressTop{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.progressText{ color:var(--muted); font-size:13px; }
+.progressBar{
+  height:12px; border-radius:999px;
+  background: rgba(255,255,255,.08);
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+.progressBar > div{
+  height:100%;
+  width:0%;
+  background: rgba(124,92,255,.55);
+}
+
+/* Report */
+.report{ margin-top:18px; }
+.reportTitle{
+  font-size:16px; font-weight:700;
+  margin: 0 0 12px 0;
+  color: var(--text);
+}
+.reportGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+  margin:12px 0;
+}
+@media (max-width: 900px){
+  .reportGrid{ grid-template-columns: 1fr; }
+}
+.reportBlock{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  border-radius:16px;
+  padding:12px 12px;
+}
+.reportH{
+  font-size:13px;
+  color: var(--muted);
+  margin-bottom:8px;
+  font-weight:600;
+}
+.reportP{
+  color: var(--text);
+  line-height:1.7;
+  font-size:14px;
+}
+.reportList{
+  margin:0; padding-left:18px;
+  color: var(--text);
+  line-height:1.75;
+  font-size:14px;
+}
+.reportList li{ margin: 4px 0; }
+
+/* Small tweaks for mobile readability */
+@media (max-width: 520px){
+  .h1{ font-size:28px; }
+  .card{ padding:16px; }
+  .btn{ padding:11px 12px; border-radius:12px; }
+  .scoreVal{ font-size:12px; }
+}
+/* CTA 区块 */
+.ctaBox{
+  margin-top:24px;
+  padding:18px;
+  border-radius:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+}
+
+.ctaBox h3{
+  margin:0 0 12px 0;
+  font-size:16px;
+}
+
+.ctaButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.ctaButtons button{
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  cursor:pointer;
+}
+
+.ctaButtons button:hover{
+  background:rgba(255,255,255,.12);
+}
+
+.primaryBtn{
+  background:rgba(124,92,255,.45);
+  border-color:rgba(124,92,255,.55);
+}

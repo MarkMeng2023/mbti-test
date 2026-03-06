@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MBTI 风格测试</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">🧭</div>
+          <div>MBTI 风格测试</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- 左侧主内容 -->
+        <div class="card">
+          <div class="h1">找到更接近你的性格类型</div>
+          <p class="p">
+            通过四个维度的题目评估，了解你的沟通方式、信息处理习惯、决策偏好与生活节奏。
+            你可以先用快速版获得初步结果，也可以直接选择专业版进行更完整的测试。
+          </p>
+
+          <div class="note">
+            <div class="noteTitle">基础信息（用于结果个性化展示）</div>
+
+            <div
+              style="
+                display:grid;
+                grid-template-columns:repeat(2,minmax(0,1fr));
+                gap:12px;
+                margin-top:10px;
+              "
+            >
+              <label class="field">
+                <span>性别</span>
+                <select id="gender">
+                  <option value="">请选择</option>
+                  <option value="male">男</option>
+                  <option value="female">女</option>
+                  <option value="other">其他</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>年龄段</span>
+                <select id="ageBand">
+                  <option value="">请选择</option>
+                  <option value="u18">18岁以下</option>
+                  <option value="18_24">18-24</option>
+                  <option value="25_34">25-34</option>
+                  <option value="35_44">35-44</option>
+                  <option value="45_54">45-54</option>
+                  <option value="55p">55岁以上</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>星座（可选）</span>
+                <select id="zodiac">
+                  <option value="">请选择</option>
+                  <option value="aries">白羊</option>
+                  <option value="taurus">金牛</option>
+                  <option value="gemini">双子</option>
+                  <option value="cancer">巨蟹</option>
+                  <option value="leo">狮子</option>
+                  <option value="virgo">处女</option>
+                  <option value="libra">天秤</option>
+                  <option value="scorpio">天蝎</option>
+                  <option value="sagittarius">射手</option>
+                  <option value="capricorn">摩羯</option>
+                  <option value="aquarius">水瓶</option>
+                  <option value="pisces">双鱼</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>血型（可选）</span>
+                <select id="blood">
+                  <option value="">请选择</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+                  <option value="O">O</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="btnRow" style="margin-top:18px;">
+            <button class="btn primary" id="startQuick">开始快速版（40题）</button>
+            <button class="btn" id="startPro">开始专业版（120题）</button>
+          </div>
+
+          <div class="note">
+            <div class="noteTitle">模式说明</div>
+            <ul class="list">
+              <li><strong>快速版</strong>：适合第一次测试，完成速度更快。</li>
+              <li><strong>专业版</strong>：题量更完整，结果通常更稳定。</li>
+              <li>测试结果仅供自我观察与参考，不作为医学或心理诊断依据。</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 右侧说明 -->
+        <div class="card">
+          <div class="h2">你将获得什么</div>
+          <ol class="list">
+            <li>你的 MBTI 类型结果</li>
+            <li>四个维度的倾向分布</li>
+            <li>核心特征、优势、潜在盲点与成长建议</li>
+            <li>朋友匹配与恋爱匹配参考</li>
+            <li>可保存与分享的结果图片</li>
+          </ol>
+
+          <div class="note" style="margin-top:16px;">
+            <div class="noteTitle">适合谁来测</div>
+            <ul class="list">
+              <li>想更了解自己沟通风格的人</li>
+              <li>想和朋友比较类型差异的人</li>
+              <li>想在社交平台分享测试结果的人</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
