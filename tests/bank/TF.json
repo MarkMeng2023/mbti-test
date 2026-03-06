@@ -1,0 +1,37 @@
+{
+  "dimension": "TF",
+  "questions": [
+    { "id": "TF_001", "dimension": "TF", "text": "做决定时，我通常更看重客观标准。", "reverse": false },
+    { "id": "TF_002", "dimension": "TF", "text": "我会优先考虑一个决定会不会伤害到别人。", "reverse": true },
+    { "id": "TF_003", "dimension": "TF", "text": "我更倾向于用逻辑判断对错。", "reverse": false },
+    { "id": "TF_004", "dimension": "TF", "text": "我通常会把人与关系放在规则前面考虑。", "reverse": true },
+    { "id": "TF_005", "dimension": "TF", "text": "我认为公平往往比体谅更重要。", "reverse": false },
+    { "id": "TF_006", "dimension": "TF", "text": "在冲突中，我更在意彼此的感受是否被理解。", "reverse": true },
+    { "id": "TF_007", "dimension": "TF", "text": "我习惯先分析利弊，再做结论。", "reverse": false },
+    { "id": "TF_008", "dimension": "TF", "text": "我常常根据对方的情绪来调整自己的判断。", "reverse": true },
+    { "id": "TF_009", "dimension": "TF", "text": "面对问题时，我通常会先找最合理的方案。", "reverse": false },
+    { "id": "TF_010", "dimension": "TF", "text": "即使方案合理，只要太伤人，我也会犹豫。", "reverse": true },
+
+    { "id": "TF_011", "dimension": "TF", "text": "我更欣赏讲话直接、讲道理的人。", "reverse": false },
+    { "id": "TF_012", "dimension": "TF", "text": "我更欣赏温和、会顾及别人感受的人。", "reverse": true },
+    { "id": "TF_013", "dimension": "TF", "text": "如果一个决定有效率，我通常愿意接受它。", "reverse": false },
+    { "id": "TF_014", "dimension": "TF", "text": "如果一个决定让人不舒服，我通常会想办法调整。", "reverse": true },
+    { "id": "TF_015", "dimension": "TF", "text": "我觉得批评只要有道理，就应该直接说。", "reverse": false },
+    { "id": "TF_016", "dimension": "TF", "text": "我会先想怎样表达，才能不让对方难受。", "reverse": true },
+    { "id": "TF_017", "dimension": "TF", "text": "做判断时，我通常尽量排除个人情绪。", "reverse": false },
+    { "id": "TF_018", "dimension": "TF", "text": "做判断时，我常常会参考自己的价值观与共鸣。", "reverse": true },
+    { "id": "TF_019", "dimension": "TF", "text": "我更容易被有条理的论证说服。", "reverse": false },
+    { "id": "TF_020", "dimension": "TF", "text": "我更容易被真诚和善意打动。", "reverse": true },
+
+    { "id": "TF_021", "dimension": "TF", "text": "当别人求助时，我会先判断什么方法最有效。", "reverse": false },
+    { "id": "TF_022", "dimension": "TF", "text": "当别人求助时，我会先关注对方的情绪状态。", "reverse": true },
+    { "id": "TF_023", "dimension": "TF", "text": "我通常愿意指出别人观点中的漏洞。", "reverse": false },
+    { "id": "TF_024", "dimension": "TF", "text": "为了保持和谐，我有时会不说出自己的真实看法。", "reverse": true },
+    { "id": "TF_025", "dimension": "TF", "text": "我更重视一致的原则，而不是因人而异。", "reverse": false },
+    { "id": "TF_026", "dimension": "TF", "text": "我更愿意根据具体的人和情境灵活处理。", "reverse": true },
+    { "id": "TF_027", "dimension": "TF", "text": "在团队中，我更自然地扮演分析问题的人。", "reverse": false },
+    { "id": "TF_028", "dimension": "TF", "text": "在团队中，我更自然地扮演协调气氛的人。", "reverse": true },
+    { "id": "TF_029", "dimension": "TF", "text": "我觉得“是否合理”通常比“是否让人喜欢”更重要。", "reverse": false },
+    { "id": "TF_030", "dimension": "TF", "text": "我觉得“是否让关系更好”通常比“是否完全客观”更重要。", "reverse": true }
+  ]
+}

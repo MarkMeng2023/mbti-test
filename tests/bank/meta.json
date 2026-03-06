@@ -1,0 +1,11 @@
+{
+  "scale": {
+    "labels": ["非常不同意", "不同意", "一般", "同意", "非常同意"]
+  },
+  "dimensions": [
+    { "id": "EI", "name": "精力取向", "left": "E", "right": "I" },
+    { "id": "SN", "name": "信息处理", "left": "S", "right": "N" },
+    { "id": "TF", "name": "决策偏好", "left": "T", "right": "F" },
+    { "id": "JP", "name": "生活方式", "left": "J", "right": "P" }
+  ]
+}

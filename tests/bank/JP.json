@@ -1,0 +1,37 @@
+{
+  "dimension": "JP",
+  "questions": [
+    { "id": "JP_001", "dimension": "JP", "text": "我通常喜欢提前规划事情。", "reverse": false },
+    { "id": "JP_002", "dimension": "JP", "text": "我更喜欢保持灵活，让事情自然发展。", "reverse": true },
+    { "id": "JP_003", "dimension": "JP", "text": "当计划确定后，我会感到更安心。", "reverse": false },
+    { "id": "JP_004", "dimension": "JP", "text": "我不太喜欢过早决定事情。", "reverse": true },
+    { "id": "JP_005", "dimension": "JP", "text": "我更喜欢把任务提前完成。", "reverse": false },
+    { "id": "JP_006", "dimension": "JP", "text": "我更习惯在截止前根据情况调整。", "reverse": true },
+    { "id": "JP_007", "dimension": "JP", "text": "我喜欢有明确的计划和安排。", "reverse": false },
+    { "id": "JP_008", "dimension": "JP", "text": "我更喜欢保持多种选择。", "reverse": true },
+    { "id": "JP_009", "dimension": "JP", "text": "完成任务会让我有成就感。", "reverse": false },
+    { "id": "JP_010", "dimension": "JP", "text": "探索新的可能性会让我兴奋。", "reverse": true },
+
+    { "id": "JP_011", "dimension": "JP", "text": "我习惯列清单安排事情。", "reverse": false },
+    { "id": "JP_012", "dimension": "JP", "text": "我更喜欢随性处理事情。", "reverse": true },
+    { "id": "JP_013", "dimension": "JP", "text": "事情确定下来会让我更放松。", "reverse": false },
+    { "id": "JP_014", "dimension": "JP", "text": "我不太喜欢被固定安排束缚。", "reverse": true },
+    { "id": "JP_015", "dimension": "JP", "text": "我更喜欢按步骤推进任务。", "reverse": false },
+    { "id": "JP_016", "dimension": "JP", "text": "我更喜欢根据当下感觉行动。", "reverse": true },
+    { "id": "JP_017", "dimension": "JP", "text": "我喜欢把事情整理得井井有条。", "reverse": false },
+    { "id": "JP_018", "dimension": "JP", "text": "我更喜欢保持开放和变化。", "reverse": true },
+    { "id": "JP_019", "dimension": "JP", "text": "我通常会提前完成工作。", "reverse": false },
+    { "id": "JP_020", "dimension": "JP", "text": "我经常在最后阶段集中完成任务。", "reverse": true },
+
+    { "id": "JP_021", "dimension": "JP", "text": "我喜欢事情有明确的结论。", "reverse": false },
+    { "id": "JP_022", "dimension": "JP", "text": "我喜欢保留更多可能性。", "reverse": true },
+    { "id": "JP_023", "dimension": "JP", "text": "我更喜欢稳定、有序的生活节奏。", "reverse": false },
+    { "id": "JP_024", "dimension": "JP", "text": "我更喜欢自由、变化的生活方式。", "reverse": true },
+    { "id": "JP_025", "dimension": "JP", "text": "我通常会尽早做出决定。", "reverse": false },
+    { "id": "JP_026", "dimension": "JP", "text": "我更喜欢继续观察再决定。", "reverse": true },
+    { "id": "JP_027", "dimension": "JP", "text": "我喜欢事情有明确时间表。", "reverse": false },
+    { "id": "JP_028", "dimension": "JP", "text": "我不太喜欢被时间表限制。", "reverse": true },
+    { "id": "JP_029", "dimension": "JP", "text": "我更喜欢完成一件事再开始下一件。", "reverse": false },
+    { "id": "JP_030", "dimension": "JP", "text": "我更喜欢同时处理多种可能性。", "reverse": true }
+  ]
+}

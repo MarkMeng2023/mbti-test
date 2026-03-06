@@ -1,0 +1,19 @@
+async function auditBank() {
+  const EI = await fetch("./tests/bank/EI.json").then(r => r.json());
+  const SN = await fetch("./tests/bank/SN.json").then(r => r.json());
+  const TF = await fetch("./tests/bank/TF.json").then(r => r.json());
+  const JP = await fetch("./tests/bank/JP.json").then(r => r.json());
+
+  const banks = { EI, SN, TF, JP };
+  let total = 0;
+
+  for (const key of Object.keys(banks)) {
+    const count = banks[key].questions.length;
+    total += count;
+    console.log(`${key}: ${count}题`);
+  }
+
+  console.log(`总题数: ${total}`);
+}
+
+auditBank();

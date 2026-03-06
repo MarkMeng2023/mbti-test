@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MBTI 风格测试 - 答题</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">🧭</div>
+        <div>MBTI 风格测试</div>
+        <span class="badge" id="progressBadge">0 / 0</span>
+      </div>
+      <a class="ghost" href="index.html">← 返回</a>
+    </div>
+
+    <div class="card" style="margin-top:18px;">
+        <div class="progressWrap">
+  <div class="progressTop">
+    <div class="progressText" id="progressText">已答 0/0</div>
+    <div class="progressText" id="progressPct">0%</div>
+  </div>
+  <div class="progressBar"><div id="progressFill"></div></div>
+</div>
+      <div class="h2" id="qTitle">题目</div>
+      <p class="p" id="qDesc">加载中…</p>
+
+      <div class="options" id="options"></div>
+
+      <div class="btnRow">
+        <button class="btn" id="prevBtn" disabled>上一题</button>
+        <button class="btn primary" id="nextBtn">下一题</button>
+      </div>
+
+      <p class="hint" id="hint"></p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
