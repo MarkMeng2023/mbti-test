@@ -16,4 +16,8 @@ async function auditBank() {
   console.log(`总题数: ${total}`);
 }
 
-auditBank();
+////////////////////////////////////////////////////////////////////////////////
+
+git add .
+git commit -m "update"
+git push

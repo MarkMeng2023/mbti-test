@@ -245,3 +245,26 @@ button{ font-family: inherit; }
   background:rgba(124,92,255,.45);
   border-color:rgba(124,92,255,.55);
 }
+
+/* MBTI 家族颜色 */
+
+.family-nt {
+  --accent: #8b5cf6;
+}
+
+.family-nf {
+  --accent: #22c55e;
+}
+
+.family-sj {
+  --accent: #3b82f6;
+}
+
+.family-sp {
+  --accent: #f59e0b;
+}
+
+/* 标题使用主题色 */
+#typeTitle {
+  color: var(--accent);
+}

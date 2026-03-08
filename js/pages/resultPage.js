@@ -52,15 +52,28 @@ export function initResultPage({ TEST, TYPE_TEXT }) {
     state.result = result;
     saveState(state);
   }
-
-  if (typeTitle) typeTitle.textContent = `你的类型：${result.type}`;
-
   const t = TYPE_TEXT?.[result.type];
+  const typeAlias = t?.title ? `｜${t.title}` : "";
+
+  if (typeTitle) {
+    typeTitle.textContent = `${result.type}${typeAlias}`;
+  }
+
+  const family = result.type[1] + result.type[2];
+
+  const root = document.documentElement;
+
+  if (family === "NT") root.classList.add("family-nt");
+  if (family === "NF") root.classList.add("family-nf");
+  if (family === "SJ") root.classList.add("family-sj");
+  if (family === "SP") root.classList.add("family-sp");
+
+
   const hintText = profileHint(profile);
 
   if (typeDescEl) {
-    if (t?.title) {
-      typeDescEl.textContent = `${t.title}${hintText}`;
+    if (t?.summary) {
+      typeDescEl.textContent = `${t.summary}${hintText}`;
     } else {
       typeDescEl.textContent = `你的结果是 ${result.type}。${hintText}`;
     }
@@ -231,7 +244,7 @@ export function initResultPage({ TEST, TYPE_TEXT }) {
       const tail = shareUrl ? `你也来测测👇\n${shareUrl}` : SITE_CONFIG.copyLinkPlaceholder;
 
       const text =
-`我测出来是 ${result.type}（${tt.title || ""}）
+        `我测出来是 ${result.type}（${tt.title || ""}）
 
 ${tt.summary || ""}
 
