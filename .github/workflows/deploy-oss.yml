@@ -9,6 +9,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      OSS_ACCESS_KEY_ID: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+      OSS_ACCESS_KEY_SECRET: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+      OSS_REGION: ${{ secrets.ALIYUN_OSS_REGION }}
+      OSS_ENDPOINT: https://oss-${{ secrets.ALIYUN_OSS_REGION }}.aliyuncs.com
 
     steps:
       - name: Checkout source
@@ -25,19 +30,9 @@ jobs:
           sudo mv ossutil /usr/local/bin/ossutil
           ossutil version
 
-      - name: Configure ossutil
-        run: |
-          ossutil config \
-            --profile github-action \
-            --language CH \
-            --endpoint https://oss-${{ secrets.ALIYUN_OSS_REGION }}.aliyuncs.com \
-            --access-key-id ${{ secrets.ALIYUN_ACCESS_KEY_ID }} \
-            --access-key-secret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
-
       - name: Upload site files to OSS
         run: |
           ossutil cp . oss://${{ secrets.ALIYUN_OSS_BUCKET }}/ \
-            --profile github-action \
             --recursive \
             --update \
             --exclude ".git/*" \
@@ -47,4 +42,4 @@ jobs:
 
       - name: List uploaded files
         run: |
-          ossutil ls oss://${{ secrets.ALIYUN_OSS_BUCKET }}/ --profile github-action
+          ossutil ls oss://${{ secrets.ALIYUN_OSS_BUCKET }}/
