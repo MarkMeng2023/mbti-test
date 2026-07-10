@@ -1,6 +1,8 @@
 // js/pages/quizPage.js
 import { loadState, saveState, ensureDefaults } from "../core/storage.js";
 import { computeResult } from "../core/scoring.js";
+import { trackQuizProgress, trackTestCompleted } from "../core/analytics.js";
+import { incrementCompletionCount } from "../core/completionCounter.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -31,6 +33,7 @@ export function initQuizPage({ TEST }) {
 
   const state = ensureDefaults(loadState());
   state.answers = state.answers || {};
+  let isSubmitting = false;
 
   const labels = TEST.scale?.labels || ["非常不同意", "不同意", "一般", "同意", "非常同意"];
 
@@ -83,6 +86,12 @@ export function initQuizPage({ TEST }) {
 
     input.addEventListener("change", () => {
       state.answers[qid] = value;
+      trackQuizProgress({
+        state,
+        mode: state.mode,
+        answeredCount: Object.keys(state.answers).length,
+        totalCount: TEST.questions.length,
+      });
       saveState(state);
       if (hint) hint.textContent = "";
       updateProgress();
@@ -135,7 +144,9 @@ export function initQuizPage({ TEST }) {
   }
 
   if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
+    nextBtn.addEventListener("click", async () => {
+      if (isSubmitting) return;
+
       const idx = state.index;
       const total = TEST.questions.length;
       const qid = state.order[idx];
@@ -146,9 +157,30 @@ export function initQuizPage({ TEST }) {
       }
 
       if (idx === total - 1) {
+        const answeredCount = Object.keys(state.answers).length;
+        if (answeredCount !== total) {
+          if (hint) hint.textContent = "请完成全部题目后再查看结果。";
+          return;
+        }
+
+        isSubmitting = true;
+        if (nextBtn) nextBtn.disabled = true;
+
         const result = computeResult(TEST, state.answers);
         state.result = result; // { type, raw, pairs } 或你 scoring.js 定义的结构
         saveState(state);
+
+        state.countedRunIds = Array.isArray(state.countedRunIds) ? state.countedRunIds : [];
+        if (!state.countedRunIds.includes(state.runId)) {
+          await incrementCompletionCount(state.runId, state.mode);
+          state.countedRunIds.push(state.runId);
+          saveState(state);
+        }
+
+        trackTestCompleted({
+          mode: state.mode,
+          resultType: result.type,
+        });
         location.href = "result.html";
         return;
       }

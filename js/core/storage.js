@@ -1,5 +1,10 @@
 export const STORAGE_KEY = "mbti_quiz_v02";
 
+export function createRunId() {
+  if (window.crypto?.randomUUID) return window.crypto.randomUUID();
+  return `run_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+}
+
 export function loadState() {
   try {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
@@ -31,6 +36,9 @@ export function ensureDefaults(state) {
   s.order = Array.isArray(s.order) ? s.order : [];
 
   s.result = s.result || null;
+  s.analytics = s.analytics && typeof s.analytics === "object" ? s.analytics : {};
+  s.runId = typeof s.runId === "string" && s.runId ? s.runId : createRunId();
+  s.countedRunIds = Array.isArray(s.countedRunIds) ? s.countedRunIds : [];
   return s;
 }
 
@@ -49,6 +57,8 @@ export function resetRun(state, { keepProfile = true } = {}) {
   state.answers = {};
   state.index = 0;
   state.result = null;
+  state.analytics = {};
+  state.runId = createRunId();
 
   // ✅ 切换模式 / 重新开始：清空抽题，下一次进入 quiz 会重新抽
   state.selectedIds = [];

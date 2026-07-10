@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>MBTI 访问数据看板</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles/analytics-dashboard.css" />
+  </head>
+  <body>
+    <main class="dashboard-shell">
+      <header class="dashboard-hero">
+        <div>
+          <div class="status-row">
+            <span class="status-pill">本地预览</span>
+            <span class="status-pill muted">当前为演示数据</span>
+          </div>
+          <h1>MBTI 访问数据看板</h1>
+          <p>网站访问、测试漏斗与关键行为概览</p>
+        </div>
+        <div class="update-card">
+          <span>最近更新时间</span>
+          <strong id="lastUpdated">--</strong>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="数据筛选">
+        <div>
+          <span class="control-label">时间范围</span>
+          <div class="segmented" data-filter-group="range">
+            <button class="active" type="button">今天</button>
+            <button type="button">最近 7 天</button>
+            <button type="button">最近 30 天</button>
+          </div>
+        </div>
+        <div>
+          <span class="control-label">页面筛选</span>
+          <div class="segmented" data-filter-group="page">
+            <button class="active" type="button">全部页面</button>
+            <button type="button">首页</button>
+            <button type="button">测试页</button>
+            <button type="button">结果页</button>
+            <button type="button">人格详情页</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="核心指标">
+        <article class="metric-card">
+          <span>累计完成测试人数</span>
+          <strong>1,019</strong>
+          <small>包含初始基数</small>
+        </article>
+        <article class="metric-card">
+          <span>本周期新增完成</span>
+          <strong>842</strong>
+          <small>不含初始基数</small>
+        </article>
+        <article class="metric-card">
+          <span>快速版完成次数</span>
+          <strong>572</strong>
+          <small>本周期演示值</small>
+        </article>
+        <article class="metric-card">
+          <span>专业版完成次数</span>
+          <strong>270</strong>
+          <small>本周期演示值</small>
+        </article>
+        <article class="metric-card">
+          <span>访问人数 UV</span>
+          <strong>2,846</strong>
+          <small>较前一周期 +12.4%</small>
+        </article>
+        <article class="metric-card">
+          <span>页面浏览量 PV</span>
+          <strong>6,392</strong>
+          <small>人均 2.2 页</small>
+        </article>
+        <article class="metric-card">
+          <span>开始测试人数</span>
+          <strong>1,328</strong>
+          <small>快速版占比 68%</small>
+        </article>
+        <article class="metric-card">
+          <span>完成测试人数</span>
+          <strong>842</strong>
+          <small>完成质量稳定</small>
+        </article>
+        <article class="metric-card">
+          <span>开始率</span>
+          <strong>46.7%</strong>
+          <small>首页到开始</small>
+        </article>
+        <article class="metric-card">
+          <span>完成率</span>
+          <strong>63.4%</strong>
+          <small>开始后完成</small>
+        </article>
+        <article class="metric-card">
+          <span>首页到完成转化率</span>
+          <strong>29.6%</strong>
+          <small>整体漏斗</small>
+        </article>
+        <article class="metric-card">
+          <span>分享或复制人数</span>
+          <strong>391</strong>
+          <small>结果页互动</small>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel panel-wide">
+          <div class="panel-head">
+            <div>
+              <h2>最近 7 天访问趋势</h2>
+              <p>演示 PV 与 UV 走势，用于预览后续统计接入效果。</p>
+            </div>
+            <span class="demo-badge">演示数据</span>
+          </div>
+          <div class="chart-wrap">
+            <svg viewBox="0 0 720 260" role="img" aria-label="最近 7 天访问趋势图">
+              <g class="grid-lines">
+                <line x1="40" y1="40" x2="690" y2="40" />
+                <line x1="40" y1="95" x2="690" y2="95" />
+                <line x1="40" y1="150" x2="690" y2="150" />
+                <line x1="40" y1="205" x2="690" y2="205" />
+              </g>
+              <polyline class="line-primary" points="40,190 148,162 256,172 364,120 472,134 580,84 688,62" />
+              <polyline class="line-secondary" points="40,210 148,190 256,196 364,156 472,164 580,128 688,112" />
+              <g class="chart-points">
+                <circle cx="40" cy="190" r="5" />
+                <circle cx="148" cy="162" r="5" />
+                <circle cx="256" cy="172" r="5" />
+                <circle cx="364" cy="120" r="5" />
+                <circle cx="472" cy="134" r="5" />
+                <circle cx="580" cy="84" r="5" />
+                <circle cx="688" cy="62" r="5" />
+              </g>
+              <g class="axis-labels">
+                <text x="32" y="238">7/04</text>
+                <text x="140" y="238">7/05</text>
+                <text x="248" y="238">7/06</text>
+                <text x="356" y="238">7/07</text>
+                <text x="464" y="238">7/08</text>
+                <text x="572" y="238">7/09</text>
+                <text x="674" y="238">7/10</text>
+              </g>
+            </svg>
+          </div>
+          <div class="legend">
+            <span><i class="dot primary"></i>PV</span>
+            <span><i class="dot secondary"></i>UV</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>设备占比</h2>
+              <p>访问设备分布预览。</p>
+            </div>
+          </div>
+          <div class="split-bars">
+            <div><span>手机</span><strong>64%</strong><i style="--value:64%"></i></div>
+            <div><span>电脑</span><strong>29%</strong><i style="--value:29%"></i></div>
+            <div><span>平板</span><strong>7%</strong><i style="--value:7%"></i></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel panel-wide">
+          <div class="panel-head">
+            <div>
+              <h2>测试转化漏斗</h2>
+              <p>每层展示人数、相对上一层转化率和相对首页整体转化率。</p>
+            </div>
+          </div>
+          <div class="funnel-list" id="funnelList"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>来源渠道</h2>
+              <p>入口来源演示分布。</p>
+            </div>
+          </div>
+          <div class="source-list">
+            <div><span>直接访问</span><strong>42%</strong></div>
+            <div><span>搜索引擎</span><strong>31%</strong></div>
+            <div><span>社交平台</span><strong>18%</strong></div>
+            <div><span>外部链接</span><strong>9%</strong></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>热门页面</h2>
+              <p>页面浏览和访问人数占比。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>页面名称</th>
+                  <th>浏览量</th>
+                  <th>访问人数</th>
+                  <th>占比</th>
+                </tr>
+              </thead>
+              <tbody id="popularPages"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>关键行为</h2>
+              <p>测试和分享相关事件演示统计。</p>
+            </div>
+          </div>
+          <div class="event-list" id="eventList"></div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="js/pages/analyticsDashboard.js"></script>
+  </body>
+</html>

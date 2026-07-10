@@ -1,8 +1,13 @@
-import { loadState, saveState, ensureDefaults, clearState } from "../core/storage.js";
+import { loadState, saveState, ensureDefaults, clearState, resetRun } from "../core/storage.js";
 import { computeResult } from "../core/scoring.js";
 import { profileHint } from "../core/profile.js";
 import { ratioFromPair, drawShareCard } from "../features/shareCard.js";
 import { SITE_CONFIG } from "../config/site.js";
+import {
+  trackResultCopied,
+  trackResultPreview,
+  trackShareImageGenerated,
+} from "../core/analytics.js";
 
 export function initResultPage({ TEST, TYPE_TEXT }) {
   const typeTitle = document.getElementById("typeTitle");
@@ -33,6 +38,9 @@ export function initResultPage({ TEST, TYPE_TEXT }) {
   const state = ensureDefaults(loadState());
   const answers = state.answers || {};
   const profile = state.profile || {};
+  const answeredCount = Object.keys(answers).length;
+  const totalCount = TEST.questions.length;
+  const hasCompletedAllQuestions = answeredCount === totalCount;
 
   // 顶部站点信息
   if (resultNavTitle) resultNavTitle.textContent = SITE_CONFIG.resultPageTitle || "测试结果";
@@ -51,6 +59,14 @@ export function initResultPage({ TEST, TYPE_TEXT }) {
     result = computeResult(TEST, answers);
     state.result = result;
     saveState(state);
+  }
+
+  if (!hasCompletedAllQuestions) {
+    trackResultPreview({
+      mode: state.mode,
+      answeredCount,
+      totalCount,
+    });
   }
   const t = TYPE_TEXT?.[result.type];
   const typeAlias = t?.title ? `｜${t.title}` : "";
@@ -233,6 +249,7 @@ export function initResultPage({ TEST, TYPE_TEXT }) {
       a.download = `MBTI_${result.type}.png`;
       a.href = canvas.toDataURL("image/png");
       a.click();
+      trackShareImageGenerated(result.type);
     });
   }
 
@@ -258,6 +275,7 @@ ${tail}`;
 
       try {
         await navigator.clipboard.writeText(text);
+        trackResultCopied(result.type);
         alert("已复制，可以直接发朋友圈 / 小红书");
       } catch (err) {
         console.error(err);
@@ -269,6 +287,8 @@ ${tail}`;
   // 再测一次
   if (retryBtn) {
     retryBtn.addEventListener("click", () => {
+      resetRun(state, { keepProfile: true });
+      saveState(state);
       location.href = "quiz.html";
     });
   }

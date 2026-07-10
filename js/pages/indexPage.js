@@ -1,4 +1,6 @@
 import { loadState, saveState, ensureDefaults, setMode, resetRun } from "../core/storage.js";
+import { trackTestStart } from "../core/analytics.js";
+import { formatCompletionCount, getCompletionCount } from "../core/completionCounter.js";
 
 export function initIndexPage() {
   const state = ensureDefaults(loadState());
@@ -32,12 +34,20 @@ export function initIndexPage() {
   // Quick / Pro
   const startQuick = document.getElementById("startQuick");
   const startPro = document.getElementById("startPro");
+  const completionCount = document.getElementById("completionCount");
+
+  if (completionCount) {
+    getCompletionCount().then((count) => {
+      completionCount.textContent = formatCompletionCount(count);
+    });
+  }
 
   const go = (mode) => {
     setMode(state, mode);
     // 切换模式时，重置本次答题（保留 profile，方便解释个性化）
     resetRun(state, { keepProfile: true });
     saveState(state);
+    trackTestStart(state.mode);
     location.href = "quiz.html";
   };
 

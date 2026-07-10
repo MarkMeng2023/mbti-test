@@ -8,6 +8,7 @@ import { initResultPage } from "./pages/resultPage.js";
 import { buildTestFromBank } from "./features/questionEngine.js";
 
 import { auditQuestionBank, printAuditReport } from "./core/bankAudit.js";
+import { trackPageView } from "./core/analytics.js";
 
 const MODE_TARGET = {
   quick: 40,
@@ -54,6 +55,7 @@ export async function bootstrap() {
 
   // index 页：不加载题库（更快）
   if (path.endsWith("index.html") || path.endsWith("/")) {
+    trackPageView("home");
     initIndexPage({ TYPE_TEXT });
     return;
   }
@@ -78,11 +80,13 @@ export async function bootstrap() {
   saveState(state);
 
   if (path.endsWith("quiz.html")) {
+    trackPageView("quiz");
     initQuizPage({ TEST, TYPE_TEXT });
     return;
   }
 
   if (path.endsWith("result.html")) {
+    trackPageView("result");
     initResultPage({ TEST, TYPE_TEXT });
     return;
   }

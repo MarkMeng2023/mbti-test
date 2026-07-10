@@ -10,4 +10,10 @@ export const SITE_CONFIG = {
   footerText: "personality-assessment",
   copyLinkPlaceholder: "https://markmeng2023.github.io/mbti-test/",
   shareHintText: "截图发给朋友，看看谁和你最像",
+
+  completionCounter: {
+    enabled: false,
+    apiBaseUrl: "",
+    initialCount: 1019,
+  },
 };

@@ -156,6 +156,33 @@ button {
   cursor: not-allowed;
 }
 
+.completionCounter {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(124, 92, 255, .28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .06);
+  color: var(--muted);
+}
+
+.completionCounter strong {
+  color: var(--text);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  .completionCounter {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 .ghost {
   color: var(--muted);
   text-decoration: none;
