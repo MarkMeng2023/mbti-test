@@ -4,10 +4,10 @@ export const SITE_CONFIG = {
   version: "v0.1",
   showVersion: false,
 
-  shareBaseUrl: "", // 未来上线后填：https://你的域名
-  showQr: false,    // 未来上线并填写 shareBaseUrl 后再改为 true
+  shareBaseUrl: "https://markmeng2023.github.io/mbti-test/",
+  showQr: false,
 
   footerText: "personality-assessment",
-  copyLinkPlaceholder: "（网站上线后这里会自动带链接）",
+  copyLinkPlaceholder: "https://markmeng2023.github.io/mbti-test/",
   shareHintText: "截图发给朋友，看看谁和你最像",
 };
